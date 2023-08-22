@@ -10,7 +10,11 @@ import org.springframework.web.bind.annotation.RestController
 @RequestMapping("api/v1/albums")
 class AlbumsRestController {
     @GetMapping
-    fun getCharacters(): ResponseEntity<List<String>> {
-        return ResponseEntity.ok(listOf("Albums"))
+    fun getCharacters(): ResponseEntity<List<Any>> {
+        val album1 = object {
+            val id = 1
+            val title = "Album 1"
+        }
+        return ResponseEntity.ok(listOf(album1))
     }
 }
