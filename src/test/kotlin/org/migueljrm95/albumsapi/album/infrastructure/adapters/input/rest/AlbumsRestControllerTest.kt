@@ -18,6 +18,6 @@ class AlbumsRestControllerTest(@Autowired val mockMvc: MockMvc) {
         mockMvc.perform(get("/api/v1/albums"))
             .andExpect(status().isOk)
             .andExpect(content().contentType(MediaType.APPLICATION_JSON))
-            .andExpect(jsonPath("$.title").isNotEmpty)
+            .andExpect(jsonPath("$[0].title").isNotEmpty)
     }
 }
