@@ -158,7 +158,7 @@
 				</executions>
 				<configuration>
 					<excludes>
-						<exclude>org.migueljrm95.albumsapi.AlbumsApiApplication*</exclude>
+						<exclude>**/AlbumsApiApplication**</exclude>
 					</excludes>
 				</configuration>
 			</plugin>
