@@ -7,5 +7,5 @@ import org.springframework.http.ResponseEntity
 
 
 interface AlbumsController {
-    fun getAlbums(): ResponseEntity<List<Album>>
+    fun getAlbums(page: Int): ResponseEntity<List<Album>>
 }

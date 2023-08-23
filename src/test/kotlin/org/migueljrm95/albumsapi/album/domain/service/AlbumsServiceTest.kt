@@ -21,8 +21,8 @@ class AlbumsServiceTest {
 
     @Test
     fun getAlbums() {
-        Mockito.`when`(albumsPort.getAlbums()).thenReturn(albums)
-        val fetchedAlbums = albumsService.getAlbums()
+        Mockito.`when`(albumsPort.getAlbums(page)).thenReturn(albums)
+        val fetchedAlbums = albumsService.getAlbums(page)
         assertNotNull(fetchedAlbums)
     }
 
@@ -33,5 +33,6 @@ class AlbumsServiceTest {
                 Album(2, "Album 2"),
                 Album(3, "Album 3")
             )
+        private val page = 1
     }
 }

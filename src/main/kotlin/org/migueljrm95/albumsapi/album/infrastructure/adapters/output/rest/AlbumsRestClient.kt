@@ -6,10 +6,11 @@ import org.springframework.cloud.openfeign.FeignClient
 import org.springframework.stereotype.Component
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RequestMethod
+import org.springframework.web.bind.annotation.RequestParam
 
 @Component
 @FeignClient(name = "Albums", url = "https://jsonplaceholder.typicode.com")
 interface AlbumsRestClient: AlbumsPort {
-    @RequestMapping(method = [RequestMethod.GET], value = ["/albums"])
-    override fun getAlbums(): List<Album>
+    @RequestMapping(method = [RequestMethod.GET], value = ["/albums?_limit=2"])
+    override fun getAlbums(@RequestParam(name = "_page") page: Int): List<Album>
 }
