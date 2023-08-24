@@ -167,6 +167,7 @@
 					<excludes>
 						<exclude>**/AlbumsApiApplication**</exclude>
 						<exclude>**/model/*</exclude>
+						<exclude>**/exception/*</exclude>
 					</excludes>
 				</configuration>
 			</plugin>
