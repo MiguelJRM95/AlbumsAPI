@@ -117,6 +117,7 @@
 						</goals>
 					</execution>
 				</executions>
+
 			</plugin>
 			<plugin>
 				<groupId>org.jetbrains.kotlin</groupId>
@@ -159,6 +160,7 @@
 				<configuration>
 					<excludes>
 						<exclude>**/AlbumsApiApplication**</exclude>
+						<exclude>**/model/*</exclude>
 					</excludes>
 				</configuration>
 			</plugin>
