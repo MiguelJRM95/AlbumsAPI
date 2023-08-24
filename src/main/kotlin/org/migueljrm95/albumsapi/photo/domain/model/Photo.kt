@@ -1,6 +1,6 @@
 package org.migueljrm95.albumsapi.photo.domain.model
 
-class Photo(
+data class Photo(
     val id: Long,
     val albumId: Long,
     val title: String,
